@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Data</title>
+    <link rel="stylesheet" type="text/css"  href="{% static 'add.css' %}">
+</head>
+<body>
+
+    <div class="main">
+        <div class="eclipse">
+        <div class="background-roun">
+            
+                <form action="{% url 'addrecord' %}" method="post" class="form-control">
+                    {% csrf_token %}
+                    <label for="First Name">First Name</label><br>
+                    <input type="text" name="first"><br>
+                    <label for="First Name">Last Name</label><br>
+                    <input type="text"  name="last"><br>
+                    <label class="lable-2" for="First Name">Country</label><br>
+                    <input type="text"  name="country"><br>
+                    <button>Submit</button>
+                </form>
+            
+        </div>
+    </div>
+
+    </div>
+    
+</body>
+</html>

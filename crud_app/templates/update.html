@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Data</title>
+    <link rel="stylesheet" type="text/css"  href="{% static 'add.css' %}">
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="eclipse">
+        <div class="background-roun">
+            
+                <form action="{% url 'update_record' member.id %}" method="post" class="form-control">
+                    {% csrf_token %}
+                    <label for="First Name">First Name</label><br>
+                    <input type="text" name="first" value="{{member.first_name}}"><br>
+                    <label for="First Name">Last Name</label><br>
+                    <input type="text"  name="last" value="{{member.last_name}}"><br>
+                    <label class="lable-2" for="First Name">Country</label><br>
+                    <input type="text"  name="country" value="{{member.country}}"><br>
+                    <button>Submit</button>
+                </form>
+            
+        </div>
+    </div>
+
+    </div>

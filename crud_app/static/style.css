@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body {
+    background-color: rgb(73, 181, 181);
+}
+.anc{
+    text-decoration: none;
+    color: white;
+}
+
+.add-button, .view-button, .update-button {
+    all: unset;
+    color: white;
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(to bottom right ,#008cff, #e100ff);
+    border-radius: 51px 0 70px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1;
+    cursor: pointer;
+}
+
+.page {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    gap: 30px;
+}
+
+.add-button::after, .view-button::after, .update-button::after {
+    content: '';
+    position: absolute;
+    width: 107%;
+    height: 102%;
+    border-radius: 51px 0 70px 0;
+    background-image: linear-gradient(to bottom right ,#008cff, #e100ff);
+    z-index: -1;
+    transition: transform 0.10s ease;
+}
+
+.add-button:hover::after, .view-button:hover::after, .update-button:hover::after {
+    transform: scale(1.05);
+}
